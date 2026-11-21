@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sunduz Collection | Luxury Gifts</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #090909;
+    color: white;
+}
+
+header {
+    background: #111;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #c9a44c;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #d4af37;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+.hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    background:
+    linear-gradient(#0009,#000b),
+    url('https://images.unsplash.com/photo-1513201099705-a9746e1e201f?w=1600')
+    center/cover;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #e5c568;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: #d4af37;
+    color: black;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.section {
+    padding: 60px 7%;
+    text-align: center;
+}
+
+.section h2 {
+    color: #d4af37;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 25px;
+}
+
+.product {
+    background: #171717;
+    border: 1px solid #6c5523;
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 20px;
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-7px);
+    border-color: #d4af37;
+}
+
+.product img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.product h3 {
+    color: #e5c568;
+    margin: 15px 0 8px;
+}
+
+.product p {
+    margin-bottom: 15px;
+}
+
+.about {
+    background: #151515;
+    line-height: 1.8;
+}
+
+.contact p {
+    margin: 12px;
+}
+
+footer {
+    background: #111;
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid #d4af37;
+    color: #d4af37;
+}
+
+.cart {
+    color: #d4af37;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Sunduz Collection</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="cart">
+        🛒 Cart: <span id="cart">0</span>
+    </div>
+</header>
+
+<section class="hero" id="home">
+    <div>
+        <h1>Make Every Moment Special</h1>
+        <p>Beautiful Gifts For Your Special People</p>
+        <a href="#products" class="btn">Explore Collection</a>
+    </div>
+</section>
+
+<section class="section" id="products">
+    <h2>Our Gift Collection</h2>
+
+    <div class="products">
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600">
+            <h3>Luxury Gift Box</h3>
+            <p>Rs. 2500</p>
+            <button class="btn" onclick="addToCart('Luxury Gift Box',2500)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?w=600">
+            <h3>Premium Perfume</h3>
+            <p>Rs. 3500</p>
+            <button class="btn" onclick="addToCart('Premium Perfume',3500)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=600">
+            <h3>Elegant Jewelry</h3>
+            <p>Rs. 1800</p>
+            <button class="btn" onclick="addToCart('Elegant Jewelry',1800)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600">
+            <h3>Luxury Watch</h3>
+            <p>Rs. 4500</p>
+            <button class="btn" onclick="addToCart('Luxury Watch',4500)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?w=600">
+            <h3>Special Gift</h3>
+            <p>Rs. 2000</p>
+            <button class="btn" onclick="addToCart('Special Gift',2000)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1512909006721-3d6018887383?w=600">
+            <h3>Birthday Gift Box</h3>
+            <p>Rs. 3000</p>
+            <button class="btn" onclick="addToCart('Birthday Gift Box',3000)">Add to Cart</button>
+        </div>
+
+    </div>
+
+    <h2 style="margin-top:40px;">Your Shopping Cart</h2>
+    <div id="cartItems">Your cart is empty.</div>
+    <h3 id="total" style="margin:20px;">Total: Rs. 0</h3>
+
+    <button class="btn" onclick="orderWhatsApp()">
+        Order on WhatsApp
+    </button>
+</section>
+
+<section class="section about" id="about">
+    <h2>About Sunduz Collection</h2>
+    <p>
+        Welcome to Sunduz Collection!
+
+        Discover beautiful and premium gifts for every special
+        occasion. We believe every gift tells a story and makes
+        memories more beautiful.
+
+        Choose your favourite gifts and make your loved ones happy.
+    </p>
+</section>
+
+<section class="section contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>📞 Phone: Your Contact Number</p>
+    <p>📍 Pakistan</p>
+    <p>🎁 Your Happiness Is Our Priority</p>
+</section>
+
+<footer>
+    <p>© 2026 Sunduz Collection. All Rights Reserved.</p>
+    <p>Luxury Gifts | Beautiful Memories</p>
+</footer>
+
+<script>
+let cartItems = [];
+
+function addToCart(name, price) {
+    cartItems.push({name, price});
+    updateCart();
+    alert(name + " added to cart!");
+}
+
+function updateCart() {
+    document.getElementById("cart").innerText = cartItems.length;
+
+    let html = "";
+    let total = 0;
+
+    cartItems.forEach((item, index) => {
+        html += `<p>${item.name} - Rs. ${item.price}
+        <button onclick="removeItem(${index})">Remove</button></p>`;
+        total += item.price;
+    });
+
+    document.getElementById("cartItems").innerHTML =
+        html || "Your cart is empty.";
+
+    document.getElementById("total").innerText =
+        "Total: Rs. " + total;
+}
+
+function removeItem(index) {
+    cartItems.splice(index, 1);
+    updateCart();
+}
+
+function orderWhatsApp() {
+    if(cartItems.length === 0) {
+        alert("Please add products to your cart first!");
+        return;
+    }
+
+    let message = "Assalam o Alaikum! I want to order:\n";
+    let total = 0;
+
+    cartItems.forEach(item => {
+        message += item.name + " - Rs. " + item.price + "\n";
+        total += item.price;
+    });
+
+    message += "\nTotal: Rs. " + total;
+
+    // Replace with your WhatsApp number
+    let phone = "923001234567";
+
+    window.open(
+        "https://wa.me/" + phone + "?text=" +
+        encodeURIComponent(message),
+        "_blank"
+    );
+}
+</script>
+
+</body>
+</html>
